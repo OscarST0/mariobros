@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(2,0,36);
+    height: 100vh;
+}
+
+@import url('https://fonts.cdnfonts.com/css/double-pivot');
+
+h1{
+    font-family: 'Double Pivot', sans-serif;
+    font-size: 5rem;                                                                                                                              
+}
+
+.rojo {
+    color: red;
+    font-size: 80px;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.azul {
+    color: rgb(41, 41, 199);
+    font-size: 80px;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.capa0 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+.capa1 {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    z-index: 1;
+}
+
+.capa2 {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    z-index: 2;
+}
+
+.capa3 {
+    position: absolute;
+    left: 100px;
+    top: 700px;
+    width: calc(100% - 200px);
+    z-index: 3;
+    width: 25rem;   
+}
+
+.capa4 {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    width: calc(50% - 150px);
+    z-index: 3;
+    width: 10rem;  
+}
+
+@keyframes mario {
+    0%  {left: 0px; }
+  25%  {left: 50px; }
+  75%  {left: 500px; }
+  100% {left: 0px;}
+}
+
+.animacion1{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  animation: mario 7s infinite;
+}
+
+@keyframes tortuga{
+    0%  {left: 0px; }
+    25%  {left: 300px; }
+    75%  {left: 0px; }
+    100% {left: 0px;}
+
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(350px);}
+    100% {transform: translateY(0px);}
+}
+
+.animacion2{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: tortuga 10s infinite;
+}
